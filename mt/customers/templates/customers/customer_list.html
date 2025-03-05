@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Список клиентов{% endblock %}
+
+{% block content %}
+<h2 class="mb-3">Список клиентов</h2>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Телефон</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for customer in customers %}
+        <tr>
+            <td>{{ customer.id }}</td>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.phone }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
